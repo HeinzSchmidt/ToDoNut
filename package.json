@@ -23,7 +23,7 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "test": "npm run compile && node out/todoMatches.test.js"
+    "test": "npm run compile && node out/todoMatches.test.js && node scripts/verify-extension-lifecycle.js"
   },
   "devDependencies": {
     "@types/node": "^20.17.0",
