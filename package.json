@@ -1,0 +1,33 @@
+{
+  "name": "todonut",
+  "displayName": "ToDoNut",
+  "description": "Yellow-highlight every instance of the literal text TODO: in open editors.",
+  "version": "0.0.1",
+  "publisher": "heinzschmidt",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HeinzSchmidt/ToDoNut"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "npm run compile && node out/todoMatches.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^5.8.2"
+  }
+}
