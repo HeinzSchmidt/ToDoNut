@@ -20,3 +20,27 @@ npm run watch
 ```
 
 Then F5.
+
+## Package as VSIX
+
+```bash
+npm install
+npm run compile
+npx @vscode/vsce package
+```
+
+This creates `todonut-0.0.1.vsix` (version matches package.json).
+
+## Install the VSIX
+
+1. Extensions sidebar → `…` menu → **Install from VSIX…**
+2. Select `todonut-0.0.1.vsix`
+3. Reload when prompted
+
+Or CLI:
+
+```bash
+code --install-extension todonut-0.0.1.vsix
+# Cursor:
+cursor --install-extension todonut-0.0.1.vsix
+```
